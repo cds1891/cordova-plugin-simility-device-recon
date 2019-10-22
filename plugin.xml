@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-simility-device-recon"
+    version="1.0.0">
+    <name>Simility Device Recon Cordova Plugin</name>
+    <description>This plugin allows to send Device Recon signals to Simility from a JS call</description>
+    <license>(ISC OR GPL-3.0)</license>
+
+    <js-module src="www/DeviceRecon.js" name="DeviceRecon">
+        <clobbers target="DeviceRecon" />
+    </js-module>
+
+    <platform name="android">
+        <source-file src="src/android/DeviceRecon.java" target-dir="src/com/cordova/plugins" />
+    
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DeviceRecon" >
+                <param name="android-package" value="com.cordova.plugins.DeviceRecon"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+      
+       <framework src="src/android/simility-recon.gradle" custom="true" type="gradleReference"/>
+    </platform>
+    <platform name="ios">
+        <header-file src="src/ios/DeviceRecon.h" />
+        <source-file src="src/ios/DeviceRecon.m" />       
+        <config-file target="config.xml" parent="/*">
+            <feature name="DeviceRecon">
+                <param name="ios-package" value="DeviceRecon"/>
+            </feature>
+        </config-file>
+        <podspec>
+            <config>
+                <source url="https://github.com/CocoaPods/Specs.git"/>            
+                <source url="https://github.com/Simility/SimilityRecon-iOS-Specs.git" />
+            </config>
+            <pods>
+              <pod name="SimilityRecon-iOS" spec="~> 1.614" />
+            </pods>
+        </podspec>
+    </platform>
+</plugin>

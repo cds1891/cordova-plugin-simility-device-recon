@@ -1,0 +1,32 @@
+{
+  "name": "cordova-plugin-simility-device-recon",
+  "version": "0.1.0",
+  "description": "Simility Device Recon SDK plugin for Android and ios",
+  "cordova": {
+    "id": "cordova-plugin-simility-device-recon",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "simility-device-recon"
+  ],
+  "author": "Carlos Retta <carlosretta@gmail.com> (https://github.com/cds1891)",
+  "license": "ISC OR GPL-3.0",
+  "homepage": "https://github.com/cds1891/cordova-plugin-simility-device-recon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cds1891/cordova-plugin-simility-device-recon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cds1891/cordova-plugin-simility-device-recon/issues"
+  }
+}
