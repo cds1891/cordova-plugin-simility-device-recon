@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-simility-device-recon",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simility Device Recon SDK plugin for Android and ios",
   "cordova": {
     "id": "cordova-plugin-simility-device-recon",
@@ -28,5 +28,8 @@
   },
   "bugs": {
     "url": "https://github.com/cds1891/cordova-plugin-simility-device-recon/issues"
+  },
+  "devDependencies": {
+    "cordova-plugin-cocoapod-support": "^1.6.2"
   }
 }
