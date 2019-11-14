@@ -1,8 +1,6 @@
 #import <Cordova/CDVPlugin.h>
-#import <SimilityRecon-iOS/SimilityRecon.h>
+#import "SimilityRecon.h"
 #import "DeviceRecon.h"
-
-
 
 @implementation DeviceRecon
 
