@@ -24,7 +24,8 @@
       
        <framework src="src/android/simility-recon.gradle" custom="true" type="gradleReference"/>
     </platform>
-    <platform name="ios">   
+    <platform name="ios">
+        <hook type="before_compile" src="hooks/ios/before_plugin_compile.js" />   
         <config-file target="config.xml" parent="/*">
             <feature name="DeviceRecon">
                 <param name="ios-package" value="DeviceRecon"/>
