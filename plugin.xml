@@ -24,21 +24,21 @@
       
        <framework src="src/android/simility-recon.gradle" custom="true" type="gradleReference"/>
     </platform>
-    <platform name="ios">
-        <header-file src="src/ios/DeviceRecon.h" />
-        <source-file src="src/ios/DeviceRecon.m" />       
+    <platform name="ios">   
         <config-file target="config.xml" parent="/*">
             <feature name="DeviceRecon">
                 <param name="ios-package" value="DeviceRecon"/>
             </feature>
         </config-file>
+        <header-file src="src/ios/DeviceRecon.h" />
+        <source-file src="src/ios/DeviceRecon.m" />    
         <podspec>
             <config>
                 <source url="https://github.com/CocoaPods/Specs.git"/>            
                 <source url="https://github.com/Simility/SimilityRecon-iOS-Specs.git" />
             </config>
-            <pods>
-              <pod name="SimilityRecon-iOS" spec="~> 1.614" />
+            <pods  use-frameworks="true">
+              <pod name="SimilityRecon-iOS" spec="~> 1.616" />
             </pods>
         </podspec>
     </platform>
